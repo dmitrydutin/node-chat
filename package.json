@@ -1,0 +1,20 @@
+{
+  "name": "chatitransition",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "markdown": "^0.5.0",
+    "mysql2": "^2.1.0",
+    "randomstring": "^1.1.5",
+    "socket.io": "^2.3.0"
+  }
+}

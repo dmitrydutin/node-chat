@@ -1,0 +1,210 @@
+body {
+    height: calc(100vh - 22px - 18px);
+    padding-top: 22px;
+    padding-bottom: 18px;
+    display: flex;
+    justify-content: center;
+    background-color: #edeef0;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Geneva, "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans Cherokee", "Noto Sans Devanagari", "Noto Sans Ethiopic", "Noto Sans Georgian", "Noto Sans Hebrew", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans Lao", "Noto Sans Osmanya", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai", sans-serif, arial, Tahoma, verdana
+}
+
+button,
+button:active,
+button:focus {
+    outline: 0
+}
+
+p {
+    margin: 0
+}
+
+.chat {
+    width: 100%;
+    max-width: 550px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative
+}
+
+.header {
+    min-height: 45px;
+    background-color: #fff;
+    border-radius: 3px 3px 0 0;
+    border-bottom: solid 1px #edeef0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative
+}
+
+.user-name {
+    font-size: 15px;
+    color: #222
+}
+
+.user-name-edit {
+    width: 60px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+    opacity: .75;
+    cursor: pointer;
+    background: url('../img/dots.svg') no-repeat center
+}
+
+.user-name-edit:hover {
+    opacity: 1
+}
+
+.main {
+    flex-grow: 1;
+    padding: 16px 30px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background: linear-gradient(45deg, #8f9e81, #dfdab4)
+}
+
+.message {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between
+}
+
+.message:first-child {
+    margin-top: auto
+}
+
+.message:hover .message__tools {
+    display: flex
+}
+
+.message-left {
+    flex-direction: row
+}
+
+.message__inner {
+    max-width: 90%;
+    padding: 12px;
+    background-color: #effdde;
+    border-radius: 9px 9px 0 9px
+}
+
+.message-left .message__inner {
+    background-color: #fff;
+    border-radius: 9px 9px 9px 0
+}
+
+.message__author {
+    margin-top: 0;
+    margin-bottom: 4px;
+    color: #42648b;
+    font-size: 12.5px;
+    font-weight: 700;
+    line-height: 1.23
+}
+
+.message__text {
+    font-size: 13px;
+    line-height: 1.38;
+    word-wrap: break-word
+}
+
+.message__text img {
+    width: 100%;
+}
+
+.message__tools {
+    width: 50px;
+    display: none;
+    flex-direction: row
+}
+
+.message__edit,
+.message__delete {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    opacity: .5
+}
+
+.message__edit:hover,
+.message__delete:hover {
+    opacity: 1
+}
+
+.message__edit {
+    background: url('../img/edit.svg') no-repeat center/70%
+}
+
+.message__delete {
+    background: url('../img/delete.svg') no-repeat center/70%
+}
+
+.footer {
+    height: 59px;
+    background-color: #fafbfc;
+    border-top: solid 1px #edeef0;
+    border-radius: 0 0 3px 3px
+}
+
+.message-form {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.message-input {
+    width: 100%;
+    width: calc(100% - 15px - 56px);
+    margin-left: 15px;
+    padding: 11px 12px;
+    outline: 0;
+    border-radius: 6px;
+    border: 1px solid #d3d9de;
+    font-size: 13px
+}
+
+.message-send {
+    width: 56px;
+    height: 100%;
+    border: 0;
+    opacity: .75;
+    cursor: pointer;
+    background: url('../img/send.svg') no-repeat center
+}
+
+.message-send:hover {
+    opacity: 1
+}
+
+@media(max-width:550px) {
+    body {
+        height: calc(var(--vh, 1vh) * 100);
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .main {
+        padding: 16px 12px
+    }
+
+    .message__tools {
+        flex-direction: column
+    }
+
+    .message__edit,
+    .message__delete {
+        width: 20px;
+        height: 20px
+    }
+}
